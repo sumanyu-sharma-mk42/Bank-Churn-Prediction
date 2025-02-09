@@ -10,7 +10,7 @@ function FileDashboard() {
   const [loading, setLoading] = useState(true);
 
   async function onSubmit(data) {
-    const response = await fetch("https://bank-churn-prediction.vercel.app/predictfile", {
+    const response = await fetch("https://bank-churn-prediction-api.vercel.app/predictfile", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
