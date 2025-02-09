@@ -23,7 +23,7 @@ function InputForm() {
   },[isSubmitting])
 
   async function onsubmit(data) {
-    const response = await fetch("https://bank-churn-prediction.vercel.app/predict", {
+    const response = await fetch("https://bank-churn-prediction-api.vercel.app/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
