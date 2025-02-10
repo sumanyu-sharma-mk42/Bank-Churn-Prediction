@@ -5,11 +5,11 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-with open("backend/model2.pkl", "rb") as f:
+with open("model2.pkl", "rb") as f:
     model = pickle.load(f)
 
 @app.route('/', methods=['GET'])
-def nothing():
+def home():
     return "<h1>hello</h1>"
 
 @app.route('/predict', methods=['POST'])
