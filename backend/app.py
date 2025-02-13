@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-with open("backend\model2.pkl", "rb") as f:
+with open("model2.pkl", "rb") as f:
     model = pickle.load(f)
 
 @app.route('/', methods=['GET'])
