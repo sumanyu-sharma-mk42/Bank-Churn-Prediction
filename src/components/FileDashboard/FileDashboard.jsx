@@ -10,7 +10,7 @@ function FileDashboard() {
   const [loading, setLoading] = useState(true);
 
   async function onSubmit(data) {
-    const response = await fetch("https://bank-churn-prediction-2fmf.onrender.com/predictfile", {
+    const response = await fetch("https://bank-churn-prediction-api.onrender.com/predictfile", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),

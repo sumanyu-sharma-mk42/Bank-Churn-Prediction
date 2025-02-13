@@ -101,12 +101,12 @@ function UserGuide() {
       </section>
 
       {/* Contact Support */}
-      <section>
+      {/* <section>
         <h2 className="text-xl font-semibold text-gray-200">5️⃣ Need Help?</h2>
         <p className="text-gray-400 mt-2">
           If you have any issues or questions, feel free to contact our support team at: <strong>support@example.com</strong>
         </p>
-      </section>
+      </section> */}
     </div>
   )
 }

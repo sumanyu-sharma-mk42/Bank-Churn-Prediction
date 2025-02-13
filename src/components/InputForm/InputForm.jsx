@@ -23,7 +23,7 @@ function InputForm() {
   },[isSubmitting])
 
   async function onsubmit(data) {
-    const response = await fetch("https://bank-churn-prediction-2fmf.onrender.com/predict", {
+    const response = await fetch("https://bank-churn-prediction-api.onrender.com/predict", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(data),
