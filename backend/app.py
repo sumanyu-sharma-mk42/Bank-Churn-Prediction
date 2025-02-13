@@ -5,7 +5,7 @@ from flask_cors import CORS
 app = Flask(__name__)
 CORS(app)
 
-with open("model2.pkl", "rb") as f:
+with open("backend\model2.pkl", "rb") as f:
     model = pickle.load(f)
 
 @app.route('/', methods=['GET'])
@@ -15,8 +15,8 @@ def home():
 @app.route('/predict', methods=['POST'])
 def predict():
     data = request.get_json()  # Get JSON data from frontend
-    country_mapping = {"France": 0, "Spain": 1, "Germany": 2}  # Example encoding
-    gender_mapping = {"Male": 0, "Female": 1}
+    country_mapping = {"France": 0 ,"france":0, "Spain": 1, "spain": 1, "Germany": 2, "germany": 2}  # Example encoding
+    gender_mapping = {"Male": 0, "Female": 1,"male": 0, "female": 1}
     input_data = np.array([
         int(data["credit_score"]),  # Convert to integer
         country_mapping.get(data["country"], -1),  # Default to -1 if not found
@@ -37,8 +37,8 @@ def predict():
 @app.route('/predictfile', methods=['POST'])
 def predictfile():
     filedata = request.get_json()
-    country_mapping = {"France": 0, "Spain": 1, "Germany": 2}  # Example encoding
-    gender_mapping = {"Male": 0, "Female": 1}
+    country_mapping = {"France": 0 ,"france":0, "Spain": 1, "spain": 1, "Germany": 2, "germany": 2}  # Example encoding
+    gender_mapping = {"Male": 0, "Female": 1,"male": 0, "female": 1}
     
     input_data = np.array([
         [
